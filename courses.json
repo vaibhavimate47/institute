@@ -1,0 +1,58 @@
+[
+    {
+        "name":"Placement Programon JAVA & .NET",
+        "faculty":"Team of Experts",
+        "date":"18th April",
+        "time":"11:00 AM"
+    },
+    {
+        "name":"C language",
+        "faculty":"Mr.Rakesh",
+        "date":"25th April",
+        "time":"9:00 AM"
+    },
+    {
+        "name":"Python",
+        "faculty":"Mr.Prasad",
+        "date":"27 th April",
+        "time":"7:30 AM"
+    },
+    {
+        "name":"C++",
+        "faculty":"Mrs.Pooja",
+        "date":"1st May",
+        "time":"1:00 PM"
+    }
+    ,
+    {
+        "name":"TypeScipt",
+        "faculty":"Mr.Rahul Borade",
+        "date":"10th May",
+        "time":"3:00 PM"
+    },
+    {
+        "name":"Mongo DB",
+        "faculty":"Tushar",
+        "date":"26 April",
+        "time":"6:00 PM"
+
+    }
+    ,{
+        "name":"Game Developer",
+        "faculty":"Rajva",
+        "date":"26 july",
+        "time":"6:00 PM"
+
+
+    }
+    ,{
+        "name":"Allah ke bande",
+        "faculty":"Vaibhviva",
+        "date":"26 july",
+        "time":"6:00 PM"
+
+
+    }
+
+    
+]

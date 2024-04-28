@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body{
+            background-image: url("../public/images/login-background.jpg");
+            background-size: cover;
+            
+        }
+        #container{
+            box-shadow: 10px 10px 5px black;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: gray;
+        }s
+    </style>
+</head>
+<body class="container-fluid">
+   
+    <div class="d-flex justify-content-center fs-1 fw-bold mt-5" >
+        Welcome to Naresh IT Institute
+    </div>
+    <form class=" d-flex justify-content-center">
+        <div id="container" class="w-25 bg-white p-4 m-4 border border-3 border-dark rounded rounded-3">
+            <div class=" fs-1 fw-bold bi-person text-center">Login</div>
+            <label for="username" class="form-label mt-4 fs-4">Username</label>
+            <input type="text" required class="form-control" name="username">
+            <label for="password" class="form-label fs-4 mt-3">Password</label>
+            <input type="password" required name="password" class="form-control">
+            <button type="submit" class="btn btn-primary mt-3 w-100"><a href="index.html">Login</a></button>
+        </div>
+    </form>
+</body>
+</html>

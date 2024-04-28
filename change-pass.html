@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        form{
+            box-shadow: 10px 10px 10px gray;
+        }
+        body{
+            background-image: url(./images/change-pass-background.jpg);
+            background-size: cover;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+
+        <form class="w-25 p-3 m-5 border border-4 border-dark rounded-3 text-dark bg-white ">
+        <div class="text-center fs-3 bi bi-lock-fill fw-bold my-4">Change Password</div>
+        <label for="currentPassword" class="form-label mt-2 fw-bold fs-5">Enter current password</label>
+        <input type="password" name="currentPassword" placeholder="current password" class="form-control">
+        
+
+        <label for="newPassword" class="form-label mt-2 fw-bold fs-5">Enter New password</label>
+        <input type="password" name="newPassword" placeholder="Enter new password" class="form-control">
+   
+        <label for="newPassword2" class="form-label mt-2 fw-bold fs-5">Confirm new password</label>
+        <input type="password" name="newPassword2" placeholder="confirm new password" class="form-control">
+
+        <button type="submit" class="btn btn-success w-100 mt-4"><a href="index.html">Change password</a></button>
+    </form>
+    
+      
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        a{
+            text-decoration: none;
+            color:white;
+        }
+        a:hover{
+            color: gray;
+        }
+    </style>
+    <script>
+        function bodyload(){
+
+            document.getElementById("Collection").style.display="none";
+            fetch("courses.json")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(courses){
+                courses.map(function(course){
+                    var tr=document.createElement("tr");
+                    var tdName=document.createElement("td");
+                    var tdFaculty=document.createElement("td");
+                    var tdDate=document.createElement("td");
+                    var tdTime=document.createElement("td");
+                    var btn=document.createElement("button");
+                   
+                    btn.className="btn btn-primary text-center px-1 m-1 bg-primary outline-dark";
+                    btn.innerHTML="Get Course";
+                    tdName.innerHTML=course.name;
+                    tdFaculty.innerHTML=course.faculty;
+                    tdDate.innerHTML=course.date;
+                    tdTime.innerHTML=course.time;
+
+                   tr.appendChild(tdName);
+                    tr.appendChild(tdFaculty);
+                    tr.appendChild(tdDate);
+                    tr.appendChild(tdTime);
+                    tr.appendChild(btn);
+                    document.querySelector('tbody').appendChild(tr);
+
+                    
+                    btn.addEventListener('click',function ShowDetails(){
+                       document.getElementById("Collection").style.display="block";
+                       document.getElementById("table").style.display="none";
+                       document.getElementById("lblCourse").innerHTML=course.name;
+                       document.getElementById("lblFaculty").innerHTML=course.faculty;
+                       document.getElementById("lblDate").innerHTML=course.date;
+                       document.getElementById("lblTime").innerHTML=course.time;
+
+                    })
+                })
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+
+    <header>
+        <div class="d-flex justify-content-center mt-4 fs-1 fw-bold">
+            Naresh Institute and Technologies
+        </div>
+        <div class="mt-4 d-flex justify-content-between fs-5 p-4 text-white bg-dark mt-5 mb-4 mx-5 rounded-3">
+            <nav>
+                <a href="index.html"><span class="bi bi-house ms-4">Home</span></a>
+                <a href="Courses.html"><span class="bi bi-question-circle ms-4" >About</span></a>
+                <a href="services.html"><span class="bi bi-question-circle ms-4">Service</span></a>
+                <a href="contactUs.html"><span class="bi bi-phone ms-4">Contact Us</span></a>
+            </nav>
+            <div>
+                    <span>
+                        <div class="dropdown">
+                            <button data-bs-toggle="dropdown" class="btn btn-dark dropdown-toggle bi bi-box-arrow-in-right">  SignIn </button>
+                            <ul class="dropdown-menu " data-bs-theme="dark">
+                                <li class="dropdown-item">  <span class="dropdown-item-text"><span class="bi bi-person-circle"></span> <a href="login.html">SignIn</a> </span> </li>
+                                <li class="dropdown-item">  <span class="dropdown-item-text"> <span class="bi bi-person-fill"><a href="registration.html"></span> SingUp </span></a> </li>
+                                <li class="dropdown-item"> <span class="dropdown-item-text"> <span class="bi bi-lock"></span><a href="change-pass.html">Change password</a></span> </li>
+                                <li class="dropdown-divider"></li>
+                                <li class="dropdown-item"> <span class="dropdown-item-text"> <span class="bi bi-question"></span> Help </span> </li>
+                            </ul>
+                        </div>
+                    </span>
+                    
+                </button>
+            </div>
+            
+        </div>
+    </header>
+
+
+    <table class="table table-striped table-bordered border-2 border-dark" id="table">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Faculty</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr id="container">
+                
+            </tr>
+        </tbody>
+    </table>
+
+
+   <div id="Collection" style="display: none;">
+    <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+        <div class="alert alert-dismissible alert-primary w-25" >
+            <a href="Courses.html"><button class="btn btn-close" data-bs-dismiss="alert"></button></a>
+            <div class="fs-3 fw-bold text-center">Selected Course</div>
+            <div>
+                <dl>
+                    <dt class="fs-5 my-2">Course Name</dt>
+                    <dd id="lblCourse"></dd>
+                    <dt class="fs-5 my-2">Faculty name</dt>
+                    <dd id="lblFaculty"></dd>
+                    <dt class="fs-5 my-2">Time</dt>
+                    <dd id="lblTime"></dd>
+                    <dt class="fs-5 my-2">Starting Date</dt>
+                    <dd id="lblDate"></dd>
+                </dl>
+            </div>
+            <a href="index.html"><button class="btn btn-success text-center my-4 w-100">Confirm</button></a>
+        </div>
+    
+       </div>
+    
+   </div>
+
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
